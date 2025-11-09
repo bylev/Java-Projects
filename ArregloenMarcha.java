@@ -1,3 +1,10 @@
+/** =====================================================================
+ * Hecho por: Diego Ramírez y Michelle Cámara
+ * Realizado como Actividad 1 de la materia de programación estructurada 
+ * en el Tecnológico de Software.
+ ========================================================================**/
+
+
 import java.util.Scanner;
 
 public class ArregloenMarcha{
