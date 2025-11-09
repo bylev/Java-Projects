@@ -1,6 +1,5 @@
-package Creacion_func;
+
 import java.util.*;
-import java.util.function.Function;
 import java.util.function.IntPredicate;
 
 public class Palindromo{

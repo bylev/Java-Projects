@@ -1,4 +1,4 @@
-package Creacion_func;
+
 import java.util.function.*;
 
 public class lambda {
