@@ -10,10 +10,12 @@ import java.util.Scanner;
 public class ArregloenMarcha{
     public static final Scanner sc = new Scanner(System.in);
 
-    
- 
+
+
     static int[] invertirOrden(int[] A) {
         int[] invertido = new int[A.length];
+
+
 
         for (int i = 0; i < A.length; i++) {
             invertido[i] = A[A.length - 1 - i];
@@ -22,6 +24,7 @@ public class ArregloenMarcha{
         return invertido;
     }
     
+
     static void MostrarArreglo(int[] arreglo) {
 
         System.out.println("\n--- Contenido del Arreglo ---");
@@ -33,27 +36,39 @@ public class ArregloenMarcha{
     }
 
  
+ 
     static void ParesArreglo(int[] arreglo){
 
+
+      
         System.out.println("\n=== Números Pares en el Arreglo ===");
        
         int parescontad0r = 0; 
+        int contadores = 0;
+
+        for (int n: arreglo){
+            if (n % 2 == 0 ) contadores++;
+        }
+        System.out.println ("En total en el arreglo hay " + contadores + " pares, los pares son: ");
+       
 
         for(int i = 0; i < arreglo.length; i++){
             
             if(arreglo[i] % 2 == 0) {
-                System.out.println("El número par es: " + arreglo[i] + " en la posición: " + i );
+                System.out.println(arreglo[i]);
                 parescontad0r++;
+               
             }
+            
         }
         
-       
         if(parescontad0r == 0) {
             System.out.println("No se encontraron números pares en el arreglo ingresado.");
         }
         System.out.println("===================================");
     }
 
+     
     static void OrdenarArreglo(int[] arreglo){
         QuickSort(arreglo, 0, arreglo.length -1);
         System.out.println("Arreglo ordenado de menor a mayor:");
@@ -88,7 +103,7 @@ public class ArregloenMarcha{
         }
     
     static int BusquedaArreglo(int[] numeros2, int x){
-        System.out.println("Ingresa el número a buscar: ");
+        System.out.print("Ingresa el número a buscar: ");
         x = sc.nextInt();
         int inicio = 0;
         int fin  = numeros2.length -1;
@@ -102,7 +117,7 @@ public class ArregloenMarcha{
         return -1;
         }
 
-    static void main(String[] args) {
+   public static void main(String[] args) {
         int[] numeros2 = new int[10];    
         int opcion;
         
@@ -117,6 +132,9 @@ public class ArregloenMarcha{
             System.out.println("7. Salir.");
             System.out.print("Seleccione una opción (1-7): ");
             opcion = sc.nextInt();
+
+            
+
 
             switch (opcion) {
                 case 1:
@@ -148,13 +166,14 @@ public class ArregloenMarcha{
                     int x = 0; 
                     int resultado = BusquedaArreglo(numeros2, x);
                     if (resultado != -1) {
-                        System.out.println("Número encontrado en la posición: " + resultado);
+                        System.out.println("El numero ingresado se encuentra en la posición: " + resultado  ) ;
                     } else {
                         System.out.println("Número no encontrado en el arreglo.");
                     }
+                    break;
                 case 7: 
                     System.out.println("Saliendo del programa...");
-                    sc.close();
+                
                     break;
                 default:
                     System.out.println("Opción no válida. Por favor, seleccione una opción del 1 al 7.");
@@ -162,6 +181,7 @@ public class ArregloenMarcha{
 
             }    
         } while (opcion != 7);
+        sc.close();
 
     }
 }

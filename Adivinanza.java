@@ -1,5 +1,4 @@
 
-package Creacion_func;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
