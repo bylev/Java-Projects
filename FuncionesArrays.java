@@ -27,7 +27,12 @@ public class FuncionesArrays {
         System.out.println("Ingresa el valor a buscar: ");
         int x = sc.nextInt();
         int pos = Arrays.binarySearch(Arreglo, x);
-        System.out.println("Elemento " + x + " se encuentra en la posición: "+ pos);
+
+        if(pos!=0){
+            System.out.println("El elemento no se encuentra en el arreglo.");
+        }else{
+            System.out.println("Elemento " + x + " se encuentra en la posición: "+ pos);
+        }
         
         sc.close();
     }
