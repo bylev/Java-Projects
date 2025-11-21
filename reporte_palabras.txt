@@ -1,0 +1,8 @@
+Reporte de análisis de palabras
+------------------------------
+Total de líneas: 12
+Total de palabras: 141
+Palabra más larga: extraordinario
+Palabra más corta: a
+Palabra buscada: ia
+Ocurrencias encontradas: 0
